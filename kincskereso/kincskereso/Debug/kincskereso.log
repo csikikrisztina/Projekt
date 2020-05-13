@@ -1,0 +1,5 @@
+﻿  Jatek.c
+C:\Users\Krisztina\Documents\GitHub\Projekt\kincskereso\kincskereso\Jatek.c(23,55): warning C4098: 'kincsHelye': 'void' function returning a value
+C:\Users\Krisztina\Documents\GitHub\Projekt\kincskereso\kincskereso\Jatek.c(25,55): warning C4098: 'kincsHelye': 'void' function returning a value
+C:\Users\Krisztina\Documents\GitHub\Projekt\kincskereso\kincskereso\Jatek.c(26,15): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  kincskereso.vcxproj -> C:\Users\Krisztina\Documents\GitHub\Projekt\kincskereso\Debug\kincskereso.exe
