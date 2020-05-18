@@ -1,19 +1,11 @@
 ﻿  Jatek.c
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(14,19): warning C4047: '==': 'int' differs in levels of indirection from 'Morzsa *'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(14,32): warning C4047: '==': 'int' differs in levels of indirection from 'Morzsa *'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(32,1): warning C4133: 'initializing': incompatible types - from 'int *' to 'Morzsa *'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(34,1): warning C4133: 'initializing': incompatible types - from 'int *' to 'Morzsa *'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(36,1): warning C4133: 'initializing': incompatible types - from 'int *' to 'Morzsa *'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(38,1): warning C4133: 'initializing': incompatible types - from 'int *' to 'Morzsa *'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(73,15): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(75,10): warning C4477: 'scanf_s' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'Morzsa **'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(76,29): warning C4047: '>': 'Morzsa *' differs in levels of indirection from 'int'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(78,12): warning C4477: 'scanf_s' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'Morzsa **'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(80,10): warning C4477: 'scanf_s' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'Morzsa **'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(81,30): warning C4047: '>': 'Morzsa *' differs in levels of indirection from 'int'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(81,59): warning C4047: '>': 'Morzsa *' differs in levels of indirection from 'int'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(83,12): warning C4477: 'scanf_s' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'Morzsa **'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(86,27): warning C4047: '=': 'Morzsa *' differs in levels of indirection from 'int'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(87,27): warning C4047: '=': 'Morzsa *' differs in levels of indirection from 'int'
-C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(46): warning C4715: 'Letrehoz': not all control paths return a value
+C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(50,15): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(99,15): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Jatek.c(158,15): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Source.c
+C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Source.c(8,30): warning C4101: 'tippY': unreferenced local variable
+C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Source.c(8,23): warning C4101: 'tippX': unreferenced local variable
+C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Source.c(8,15): warning C4101: 'morzsaY': unreferenced local variable
+C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\kincskereso\Source.c(8,6): warning C4101: 'morzsaX': unreferenced local variable
+  Generating Code...
   kincskereso.vcxproj -> C:\Users\Krisztina\Documents\GitHub\Projekt\kereso\Debug\kincskereso.exe

@@ -5,22 +5,22 @@
 #include <stdio.h>
 
 int main() {
-	time_t currentTime, startTime;
-	startTime = time(0);
-	Letrehoz();
-	kiirErdo();
-	while (1) {
-		currentTime = time(0);
-		morzsaHelye();
-		//pontszam();
-		if (currentTime - startTime > 30) {
-			printf("Lejart az idod!\n Jatek vege.\n");
-			break;
-		}
-	}
-	
-	//tippHelye();
-	
-	//talalat_e();
 
+	kiirErdo();
+	morzsaHelye();
+	int valaszt;
+	printf("Ha folytatni szeredned a jatekot ird be az 1-t, ha kilepnel 0-t!\n");
+	scanf_s("%i", &valaszt);
+	if (valaszt == 1) {
+		kiirErdo();
+		morzsaHelye2();
+	}
+	else { return 0; }
+	printf("Ha folytatni szeredned a jatekot ird be az 1-t, ha kilepnel 0-t!\n");
+	scanf_s("%i", &valaszt);
+	if (valaszt == 1) {
+		kiirErdo();
+		morzsaHelye3();
+	}
+	else { return 0; }
 }
