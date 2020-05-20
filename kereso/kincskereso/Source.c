@@ -6,21 +6,22 @@
 
 int main() {
 
-	kiirErdo();
+	kiir();
 	morzsaHelye();
 	int valaszt;
 	printf("Ha folytatni szeredned a jatekot ird be az 1-t, ha kilepnel 0-t!\n");
 	scanf_s("%i", &valaszt);
 	if (valaszt == 1) {
-		kiirErdo();
+		kiir();
 		morzsaHelye2();
 	}
 	else { return 0; }
 	printf("Ha folytatni szeredned a jatekot ird be az 1-t, ha kilepnel 0-t!\n");
 	scanf_s("%i", &valaszt);
 	if (valaszt == 1) {
-		kiirErdo();
+		kiir();
 		morzsaHelye3();
 	}
 	else { return 0; }
+	system("pause");
 }

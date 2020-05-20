@@ -5,28 +5,28 @@
 #include <stdbool.h>
 #include <Windows.h>
 
-//char** Letrehoz(char** erdo)
-//{
-//	erdo = (char**)calloc(6, sizeof(char*));
-//	for (int i = 0; i < 6; i++){
-//		erdo[i] = (char*)calloc(6, sizeof(char));
-//	}
-//	if (!erdo) { printf("Sikertelen helyfoglalas"); return 0; }
-//	return erdo;
-//
-//}
 
-void kiirErdo(int tippX, int tippY)
-{
+//kirajzolja a palyat
+void kiir() {
+	printf("\nAz Erdo: \n");
+	for (int i = 1; i <= 5; i++) {
+		for (int j = 1; j <= 5; j++) {
+
+			printf("*");
+		}
+		printf("\n");
+	}
+	
+}
+//kirajzolja a palyat, miutan a jatekos mar tippelt morzsa lehetseges helyere
+void kiirErdo(int tippX, int tippY){
+
 	printf("\nAz Erdo: \n");
 	for (int i = 1; i <= 5; i++) {
 		for (int j=1 ; j <= 5; j++) {
 			if (i == tippX && j == tippY) {
 				printf("J");
 			}
-			/*if (erdo[i][j] == '1') {
-				printf("J");
-			}*/
 			 else {
 				printf("*");
 			}
@@ -35,13 +35,13 @@ void kiirErdo(int tippX, int tippY)
 	}
 	
 }
-
+//az elso szint, bekeri a jatekostol a tippeket, kigeneralja a morzsa helyet, szamolja az osszegyujtott morzsakat
 void morzsaHelye(int morzsaX, int morzsaY, int tippX, int tippY)
 {
 	int megtalalt = 0;
 	bool talalat = false;
 	srand(time(0));
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 10; i++) {
 		printf("Irj be ket 1 es 5 kozotti szamot: \n");
 		scanf_s("%i", &tippX);
 		if (tippX <= 0 || tippX > 5) {
@@ -53,7 +53,7 @@ void morzsaHelye(int morzsaX, int morzsaY, int tippX, int tippY)
 			printf("Nem jo szamot irtal be, irj ujat!\n");
 			scanf_s("%i", &tippY);
 		}
-		for (int i = 0; i < 12; i++) {
+		for (int i = 0; i < 15; i++) {
 			morzsaX = rand() % 4 + 1;
 			morzsaY = rand() % 4 + 1;
 			if (tippX == morzsaX && tippY == morzsaY) {
@@ -78,20 +78,20 @@ void morzsaHelye(int morzsaX, int morzsaY, int tippX, int tippY)
 		
 	printf("Megtalalt morzsak szama: %i\n", megtalalt);
 	if (megtalalt >= 5) {
-		printf("Eleg morzsat gyujtottel ahhoz, hogy Juliska hazatalaljon!\n");
+		printf("Eleg morzsat gyujtottel ahhoz, hogy Jancsi es Juliska hazatalaljon!\n");
 	}
 	else {
-		printf("Nem sikerul eleg morzsat gyujtened, hogy hazajuttasd Juliskat!\n");
+		printf("Nem sikerul eleg morzsat gyujtened, hogy hazajuttasd Jancsit es Juliskat!\n");
 	}
 }
-
+//a masodik szint, bekeri a jatekostol a tippeket, kigeneralja a morzsa helyet, szamolja a pontokat
 void morzsaHelye2(int morzsaX, int morzsaY, int tippX, int tippY)
 {
 	int pontszam = 0;
 	bool talalat = false;
 	srand(time(0));
 	printf("Minden megtalalt morzsaert 5 pontot kapsz, minden sikertelen talalatert 2 pont levonast!\n\n");
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 10; i++) {
 		printf("Irj be ket 1 es 5 kozotti szamot: \n");
 		scanf_s("%i", &tippX);
 		if (tippX <= 0 || tippX > 5) {
@@ -103,7 +103,7 @@ void morzsaHelye2(int morzsaX, int morzsaY, int tippX, int tippY)
 			printf("Nem jo szamot irtal be, irj ujat!\n");
 			scanf_s("%i", &tippY);
 		}
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < 12; i++) {
 			morzsaX = rand() % 4 + 1;
 			morzsaY = rand() % 4 + 1;
 			if (tippX == morzsaX && tippY == morzsaY) {
@@ -132,14 +132,14 @@ void morzsaHelye2(int morzsaX, int morzsaY, int tippX, int tippY)
 	}
 
 	printf("Vegso pontszamod: %i\n", pontszam);
-	if (pontszam > 20) {
-		printf("Eleg morzsat gyujtottel ahhoz, hogy Juliska hazatalaljon!\n");
+	if (pontszam >= 10) {
+		printf("Eleg morzsat gyujtottel ahhoz, hogy Jancsi es Juliska hazatalaljon!\n");
 	}
 	else {
-		printf("Nem sikerult eleg morzsat gyujtened, hogy hazajuttasd Juliskat!\n");
+		printf("Nem sikerult eleg morzsat gyujtened, hogy hazajuttasd Jancsit es Juliskat!\n");
 	}
 }
-
+//a harmadik szint, bekeri a jatekostol a tippeket, kigeneralja a morzsa helyet, szamolja a pontokat, meri az idot
 void morzsaHelye3(int morzsaX, int morzsaY, int tippX, int tippY)
 {
 	int pontszam = 0;
@@ -163,7 +163,7 @@ void morzsaHelye3(int morzsaX, int morzsaY, int tippX, int tippY)
 			printf("Nem jo szamot irtal be, irj ujat!\n");
 			scanf_s("%i", &tippY);
 		}
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 8; i++) {
 			morzsaX = rand() % 4 + 1;
 			morzsaY = rand() % 4 + 1;
 			if (tippX == morzsaX && tippY == morzsaY) {
@@ -193,13 +193,13 @@ void morzsaHelye3(int morzsaX, int morzsaY, int tippX, int tippY)
 					printf("Lejart az idod!\n Jatek vege.\n\n");
 					break;
 				}
-
 	}
 	printf("Vegso pontszamod: %i\n", pontszam);
-	if (pontszam > 0) {
-		printf("Eleg morzsat gyujtottel ahhoz, hogy Juliska hazatalaljon!\n");
+	if (pontszam >= 0) {
+		printf("Eleg morzsat gyujtottel ahhoz, hogy Jancsi es Juliska hazatalaljon!\n");
 	}
 	else {
-		printf("Nem sikerult eleg morzsat gyujtened, hogy hazajuttasd Juliskat!\n");
+		printf("Nem sikerult eleg morzsat gyujtened, hogy hazajuttasd Jancsit es Juliskat!\n");
 	}
 }
+
